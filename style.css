@@ -156,4 +156,28 @@
         border-radius: 50%;
         left: -37px;
     }
+    .facebook-link {
+        color: black; /* Thêm màu đen cho cả chữ và icon */
+    }
+    
+    .facebook-link i.fab.fa-facebook-f {
+        color: black; /* Thêm màu đen cho icon */
+    }
+    
+    .facebook-link span {
+        color: black; /* Thêm màu đen cho chữ "facebook" */
+    }
+    .website-link {
+        color: black; /* Thêm màu đen cho cả chữ và icon */
+    }
+    
+    .website-link i.fab.fa-youtube {
+        color: black; /* Thêm màu đen cho icon YouTube */
+    }
+    
+    .website-link span {
+        color: black; /* Thêm màu đen cho chữ "WEBSITE" */
+    }
+    
+    
     
