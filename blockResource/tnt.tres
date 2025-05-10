@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Block" load_steps=4 format=3 uid="uid://bbic5tgloabpl"]
+
+[ext_resource type="Texture2D" uid="uid://c60st28qg551m" path="res://texture/tile_map.png" id="1_8e4ed"]
+[ext_resource type="Script" path="res://blockResource.gd" id="2_12hjs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rpyo"]
+atlas = ExtResource("1_8e4ed")
+region = Rect2(129, 0, 15, 16)
+
+[resource]
+script = ExtResource("2_12hjs")
+block_name = "tnt"
+atlas_coords = Vector2i(8, 0)
+block_id = 5
+break_time = 1.0
+icon = SubResource("AtlasTexture_5rpyo")

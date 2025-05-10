@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://clc6a8qnw8cw"]
+
+[ext_resource type="Texture2D" uid="uid://b4vuwvh8j1kjm" path="res://texture/items/diamond_sword.png" id="1_47btm"]
+[ext_resource type="Script" path="res://itemResource.gd" id="2_fr5ce"]
+
+[resource]
+script = ExtResource("2_fr5ce")
+name = "Diamond Sword"
+description = ""
+icon = ExtResource("1_47btm")
+type = "Useable"
+is_original = true
+health = 1
+strengtht = 2
+armor = 2
+inventarSlot = "BagSlots"
+inventarPosition = 2

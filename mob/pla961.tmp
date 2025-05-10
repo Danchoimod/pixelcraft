@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw5x53vgxakcx"]
+
+[ext_resource type="Script" path="res://script/player.gd" id="1_6kh4r"]
+[ext_resource type="Texture2D" uid="uid://cig7a30v8d316" path="res://skins/steve.png" id="2_d556k"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v7h28"]
+radius = 22.0
+height = 132.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_6kh4r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(609, 527)
+shape = SubResource("CapsuleShape2D_v7h28")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+root_node = NodePath("")
+
+[node name="head" type="Sprite2D" parent="."]
+position = Vector2(607, 502)
+scale = Vector2(3, 3)
+texture = ExtResource("2_d556k")
+region_enabled = true
+region_rect = Rect2(0, 8, 8, 8)
+
+[node name="LeftHand" type="Sprite2D" parent="."]
+position = Vector2(607, 519)
+scale = Vector2(3, 3)
+texture = ExtResource("2_d556k")
+offset = Vector2(0, 4.41)
+region_enabled = true
+region_rect = Rect2(40, 20, 4, 12)
+
+[node name="body" type="Sprite2D" parent="."]
+position = Vector2(607, 532)
+scale = Vector2(3, 3)
+texture = ExtResource("2_d556k")
+region_enabled = true
+region_rect = Rect2(16, 20, 4, 12)
+
+[node name="RightArm" type="Sprite2D" parent="."]
+position = Vector2(607, 552)
+scale = Vector2(3, 3)
+texture = ExtResource("2_d556k")
+offset = Vector2(0, 5.305)
+region_enabled = true
+region_rect = Rect2(12, 20, 4, 12)
+
+[node name="LeftArm" type="Sprite2D" parent="."]
+position = Vector2(607, 552)
+scale = Vector2(3, 3)
+texture = ExtResource("2_d556k")
+offset = Vector2(0, 5.305)
+region_enabled = true
+region_rect = Rect2(12, 20, 4, 12)
+
+[node name="RightHand" type="Sprite2D" parent="."]
+position = Vector2(607, 519)
+scale = Vector2(3, 3)
+texture = ExtResource("2_d556k")
+offset = Vector2(0, 4.41)
+region_enabled = true
+region_rect = Rect2(40, 20, 4, 12)

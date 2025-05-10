@@ -1,0 +1,253 @@
+[gd_scene load_steps=9 format=3 uid="uid://13ntksdigs4k"]
+
+[ext_resource type="Texture2D" uid="uid://caupn1m5ade30" path="res://texture/gui/becd7e1a-aa50-4d82-a93f-2fb86221f5e9-cover.png" id="1_3umhv"]
+[ext_resource type="Texture2D" uid="uid://01y6ee2ilpie" path="res://texture/items/boat.png" id="2_lg5eu"]
+[ext_resource type="PackedScene" uid="uid://duidbcgxm55na" path="res://slotNode.tscn" id="2_po4yx"]
+[ext_resource type="Texture2D" uid="uid://6b6n1ckq00da" path="res://texture/items/bucket_lava.png" id="3_j7032"]
+[ext_resource type="Texture2D" uid="uid://h850sa742704" path="res://texture/items/fish_pufferfish_raw.png" id="4_eeb4t"]
+[ext_resource type="Texture2D" uid="uid://b362faf20w8jt" path="res://texture/items/gold_helmet.png" id="5_3nwmb"]
+[ext_resource type="PackedScene" uid="uid://p5ikfo50ovxs" path="res://ui/inv_player.tscn" id="6_tpusp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xjhe"]
+atlas = ExtResource("1_3umhv")
+region = Rect2(0, 0, 176, 166)
+
+[node name="Inventory" type="Node2D"]
+texture_filter = 3
+position = Vector2(339, 59)
+scale = Vector2(3, 3)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 3
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_5xjhe")
+
+[node name="bagslot" type="GridContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 84.0
+offset_right = 168.0
+offset_bottom = 136.0
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 9
+
+[node name="slot" parent="TextureRect/bagslot" instance=ExtResource("2_po4yx")]
+layout_mode = 2
+
+[node name="slot2" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot3" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot4" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot5" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot6" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot7" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot8" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot9" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot10" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot11" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot12" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot13" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot14" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot15" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot16" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("2_lg5eu")
+
+[node name="slot17" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot18" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot19" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot20" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("3_j7032")
+
+[node name="slot21" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot22" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot23" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot24" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot25" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot26" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot27" type="TextureRect" parent="TextureRect/bagslot"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="keybar" type="GridContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 142.0
+offset_right = 168.0
+offset_bottom = 158.0
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 9
+
+[node name="slot" type="TextureRect" parent="TextureRect/keybar"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot2" type="TextureRect" parent="TextureRect/keybar"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot3" type="TextureRect" parent="TextureRect/keybar"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot4" type="TextureRect" parent="TextureRect/keybar"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot5" type="TextureRect" parent="TextureRect/keybar"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot6" type="TextureRect" parent="TextureRect/keybar"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot7" type="TextureRect" parent="TextureRect/keybar"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("4_eeb4t")
+
+[node name="slot8" type="TextureRect" parent="TextureRect/keybar"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot9" type="TextureRect" parent="TextureRect/keybar"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="equipment" type="GridContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 24.0
+offset_bottom = 78.0
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+
+[node name="slot" type="TextureRect" parent="TextureRect/equipment"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("5_3nwmb")
+
+[node name="slot2" type="TextureRect" parent="TextureRect/equipment"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot3" type="TextureRect" parent="TextureRect/equipment"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot4" type="TextureRect" parent="TextureRect/equipment"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="crafting" type="GridContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 18.0
+offset_right = 132.0
+offset_bottom = 52.0
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 2
+
+[node name="slot" type="TextureRect" parent="TextureRect/crafting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot2" type="TextureRect" parent="TextureRect/crafting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot3" type="TextureRect" parent="TextureRect/crafting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="slot4" type="TextureRect" parent="TextureRect/crafting"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 7.0
+offset_right = 75.0
+offset_bottom = 78.0
+
+[node name="player" parent="TextureRect/MarginContainer" instance=ExtResource("6_tpusp")]
+position = Vector2(-383, -199)
+scale = Vector2(0.7, 0.7)

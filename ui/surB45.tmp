@@ -1,0 +1,211 @@
+[gd_scene load_steps=6 format=3 uid="uid://hqe4ctslusy3"]
+
+[ext_resource type="Script" path="res://script/survival_inv.gd" id="1_ogdgt"]
+[ext_resource type="Texture2D" uid="uid://caupn1m5ade30" path="res://texture/gui/becd7e1a-aa50-4d82-a93f-2fb86221f5e9-cover.png" id="2_4je2o"]
+[ext_resource type="PackedScene" uid="uid://duidbcgxm55na" path="res://slotNode.tscn" id="3_gw5a3"]
+[ext_resource type="PackedScene" uid="uid://p5ikfo50ovxs" path="res://ui/inv_player.tscn" id="7_eefdn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahuxu"]
+atlas = ExtResource("2_4je2o")
+region = Rect2(0, 0, 176, 166)
+
+[node name="Survival" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ogdgt")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 3
+layout_mode = 0
+offset_left = 340.0
+offset_top = 64.0
+offset_right = 516.0
+offset_bottom = 230.0
+scale = Vector2(3, 3)
+texture = SubResource("AtlasTexture_ahuxu")
+
+[node name="bagslot" type="GridContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 84.0
+offset_right = 168.0
+offset_bottom = 136.0
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 9
+
+[node name="Slot1" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot2" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot3" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot4" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot5" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot6" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot7" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot8" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot9" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot10" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot11" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot12" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot13" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot14" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot15" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot16" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot17" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot18" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot19" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot20" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot21" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot22" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot23" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot24" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot25" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot26" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot27" parent="TextureRect/bagslot" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="keybar" type="GridContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 142.0
+offset_right = 168.0
+offset_bottom = 158.0
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 9
+
+[node name="Slot1" parent="TextureRect/keybar" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot2" parent="TextureRect/keybar" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot3" parent="TextureRect/keybar" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot4" parent="TextureRect/keybar" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot5" parent="TextureRect/keybar" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot6" parent="TextureRect/keybar" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot7" parent="TextureRect/keybar" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot8" parent="TextureRect/keybar" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot9" parent="TextureRect/keybar" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="equipment" type="GridContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 24.0
+offset_bottom = 78.0
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+
+[node name="Slot1" parent="TextureRect/equipment" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot2" parent="TextureRect/equipment" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot3" parent="TextureRect/equipment" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot4" parent="TextureRect/equipment" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="crafting" type="GridContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 18.0
+offset_right = 132.0
+offset_bottom = 52.0
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 2
+
+[node name="Slot1" parent="TextureRect/crafting" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot2" parent="TextureRect/crafting" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot3" parent="TextureRect/crafting" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="Slot4" parent="TextureRect/crafting" instance=ExtResource("3_gw5a3")]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 7.0
+offset_right = 75.0
+offset_bottom = 78.0
+
+[node name="player" parent="TextureRect/MarginContainer" instance=ExtResource("7_eefdn")]
+position = Vector2(-383, -199)
+scale = Vector2(0.7, 0.7)

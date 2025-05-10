@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://p5ikfo50ovxs"]
+
+[ext_resource type="Texture2D" uid="uid://cig7a30v8d316" path="res://skins/steve.png" id="1_qm42g"]
+
+[node name="player" type="Node2D"]
+
+[node name="head" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(581, 309.935)
+scale = Vector2(3, 3)
+texture = ExtResource("1_qm42g")
+offset = Vector2(0, -3.645)
+region_enabled = true
+region_rect = Rect2(8, 8, 8, 8)
+
+[node name="LeftHand" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(599, 315.935)
+scale = Vector2(3, 3)
+texture = ExtResource("1_qm42g")
+offset = Vector2(0, 4.41)
+region_enabled = true
+region_rect = Rect2(44, 20, 4, 12)
+
+[node name="RightArm" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(587, 348.935)
+scale = Vector2(3, 3)
+texture = ExtResource("1_qm42g")
+offset = Vector2(0, 5.305)
+region_enabled = true
+region_rect = Rect2(4, 20, 4, 12)
+
+[node name="LeftArm" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(575, 348.935)
+scale = Vector2(3, 3)
+texture = ExtResource("1_qm42g")
+offset = Vector2(0, 5.305)
+region_enabled = true
+region_rect = Rect2(4, 20, 4, 12)
+
+[node name="body" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(581, 328.935)
+scale = Vector2(3, 3)
+texture = ExtResource("1_qm42g")
+region_enabled = true
+region_rect = Rect2(20, 20, 8, 12)
+
+[node name="RightHand" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(563, 315.935)
+scale = Vector2(3, 3)
+texture = ExtResource("1_qm42g")
+offset = Vector2(0, 4.41)
+region_enabled = true
+region_rect = Rect2(52, 20, 4, 12)

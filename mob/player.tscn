@@ -1,0 +1,302 @@
+[gd_scene load_steps=17 format=3 uid="uid://dw5x53vgxakcx"]
+
+[ext_resource type="Script" path="res://script/player.gd" id="1_6kh4r"]
+[ext_resource type="Texture2D" uid="uid://cig7a30v8d316" path="res://skins/steve.png" id="2_d556k"]
+[ext_resource type="Script" path="res://script/start_screen.gd" id="2_glr4s"]
+[ext_resource type="PackedScene" uid="uid://d1mvy2bb1456q" path="res://ui/hub_screen.tscn" id="5_uc3i7"]
+[ext_resource type="PackedScene" uid="uid://hqe4ctslusy3" path="res://ui/survival_inv.tscn" id="5_xs387"]
+
+[sub_resource type="Animation" id="Animation_pnoby"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../RightArm:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../LeftArm:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../LeftHand:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../RightHand:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_wusxh"]
+resource_name = "edle"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../LeftHand:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../LeftArm:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../RightArm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../RightHand:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_dvl8b"]
+resource_name = "jump"
+
+[sub_resource type="Animation" id="Animation_xdbch"]
+resource_name = "left_break"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../RightHand:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.882294, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_bnfp7"]
+resource_name = "right_break"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../LeftHand:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.735269, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_0w61n"]
+resource_name = "run"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../RightArm:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.433333, 0.7, 0.966667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.463266, 0.639052, -0.605261, 0.500405, -0.537944]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../LeftArm:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.433333, 0.7, 0.966667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.431866, -0.403578, 0.48777, -0.492145, 0.464751]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../LeftHand:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.433333, 0.7, 0.966667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.727627, -0.740219, 0.64434, -0.848767, 0.537098]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../RightHand:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.433333, 0.7, 0.966667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.662407, 0.690581, -0.699572, 0.662548, -0.645609]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_feurl"]
+_data = {
+"RESET": SubResource("Animation_pnoby"),
+"edle": SubResource("Animation_wusxh"),
+"jump": SubResource("Animation_dvl8b"),
+"left_break": SubResource("Animation_xdbch"),
+"right_break": SubResource("Animation_bnfp7"),
+"run": SubResource("Animation_0w61n")
+}
+
+[sub_resource type="GDScript" id="GDScript_sn4vc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4yl64"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_lforx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nmmpv"]
+size = Vector2(25.5526, 87.6863)
+
+[node name="Player" type="CharacterBody2D"]
+rotation = 0.00110811
+script = ExtResource("1_6kh4r")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Camera2D")
+libraries = {
+"": SubResource("AnimationLibrary_feurl")
+}
+script = SubResource("GDScript_sn4vc")
+
+[node name="cloud" type="Sprite2D" parent="."]
+modulate = Color(0.23, 0.704833, 1, 1)
+z_index = -1
+material = SubResource("ShaderMaterial_4yl64")
+position = Vector2(32.718, 323.928)
+rotation = -0.00221622
+scale = Vector2(2420, 1390)
+texture = SubResource("CanvasTexture_lforx")
+script = ExtResource("2_glr4s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(606.776, 542.157)
+shape = SubResource("RectangleShape2D_nmmpv")
+
+[node name="head" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(606.569, 513.328)
+scale = Vector2(3, 3)
+texture = ExtResource("2_d556k")
+offset = Vector2(0, -3.645)
+region_enabled = true
+region_rect = Rect2(0, 8, 8, 8)
+
+[node name="LeftHand" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(607, 519)
+scale = Vector2(3, 3)
+texture = ExtResource("2_d556k")
+offset = Vector2(0, 4.41)
+region_enabled = true
+region_rect = Rect2(40, 20, 4, 12)
+
+[node name="RightArm" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(607, 552)
+scale = Vector2(3, 3)
+texture = ExtResource("2_d556k")
+offset = Vector2(0, 5.305)
+region_enabled = true
+region_rect = Rect2(12, 20, 4, 12)
+
+[node name="LeftArm" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(607, 552)
+scale = Vector2(3, 3)
+texture = ExtResource("2_d556k")
+offset = Vector2(0, 5.305)
+region_enabled = true
+region_rect = Rect2(12, 20, 4, 12)
+
+[node name="body" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(607, 532)
+scale = Vector2(3, 3)
+texture = ExtResource("2_d556k")
+region_enabled = true
+region_rect = Rect2(16, 20, 4, 12)
+
+[node name="RightHand" type="Sprite2D" parent="."]
+texture_filter = 3
+position = Vector2(607, 519)
+scale = Vector2(3, 3)
+texture = ExtResource("2_d556k")
+offset = Vector2(0, 4.41)
+region_enabled = true
+region_rect = Rect2(40, 20, 4, 12)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(617, 491)
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 0.0
+
+[node name="Hub" parent="." instance=ExtResource("5_uc3i7")]
+
+[node name="Survival" parent="Hub" instance=ExtResource("5_xs387")]
+layout_mode = 1

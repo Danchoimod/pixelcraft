@@ -1,0 +1,236 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwitq4xaukhd0"]
+
+[ext_resource type="Script" path="res://script/creative_inv.gd" id="1_bevn2"]
+[ext_resource type="Texture2D" uid="uid://4kel5v754udf" path="res://texture/gui/tab_items.png" id="2_2jgc1"]
+[ext_resource type="Texture2D" uid="uid://caupn1m5ade30" path="res://texture/gui/becd7e1a-aa50-4d82-a93f-2fb86221f5e9-cover.png" id="2_13dyr"]
+[ext_resource type="PackedScene" uid="uid://duidbcgxm55na" path="res://slotNode.tscn" id="3_ix5i6"]
+[ext_resource type="Resource" uid="uid://d2ohrmrjlq5hj" path="res://itemResource/carrot.tres" id="4_abjyt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahuxu"]
+atlas = ExtResource("2_2jgc1")
+region = Rect2(0, 0, 196, 137)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_333w2"]
+atlas = ExtResource("2_13dyr")
+region = Rect2(166, 166, 24, 24)
+
+[node name="creative" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bevn2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 3
+layout_mode = 0
+offset_left = 340.0
+offset_top = 64.0
+offset_right = 536.0
+offset_bottom = 201.0
+scale = Vector2(3, 3)
+texture = SubResource("AtlasTexture_ahuxu")
+
+[node name="bagslot" type="GridContainer" parent="TextureRect"]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 18.0
+offset_right = 169.0
+offset_bottom = 178.0
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 9
+
+[node name="Slot1" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot2" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot3" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot4" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot5" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot6" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot7" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot8" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot9" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+itemResource = ExtResource("4_abjyt")
+
+[node name="Slot10" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot11" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot12" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot13" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot14" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot15" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot16" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot17" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot18" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot19" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot20" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot21" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot22" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot23" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot24" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot25" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot26" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot27" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot28" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot29" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot30" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot31" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot32" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot33" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot34" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot35" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot36" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot37" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot38" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot39" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot40" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot41" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot42" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot43" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot44" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot45" parent="TextureRect/bagslot" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="keybar" type="GridContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 8.66666
+offset_top = 112.333
+offset_right = 168.667
+offset_bottom = 128.333
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 9
+
+[node name="Slot1" parent="TextureRect/keybar" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot2" parent="TextureRect/keybar" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot3" parent="TextureRect/keybar" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot4" parent="TextureRect/keybar" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot5" parent="TextureRect/keybar" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot6" parent="TextureRect/keybar" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot7" parent="TextureRect/keybar" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot8" parent="TextureRect/keybar" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="Slot9" parent="TextureRect/keybar" instance=ExtResource("3_ix5i6")]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_top = -55.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_333w2")
+
+[connection signal="mouse_entered" from="TextureRect" to="." method="_on_texture_rect_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect" to="." method="_on_texture_rect_mouse_exited"]

@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2pl1iojvtnnj"]
+
+[ext_resource type="Script" path="res://script/control_menubox.gd" id="1_kr4si"]
+[ext_resource type="Theme" uid="uid://couahn5oundm3" path="res://theme/bt_defauth.tres" id="1_vt2h8"]
+[ext_resource type="Script" path="res://script/start_screen.gd" id="1_xm71v"]
+[ext_resource type="Theme" uid="uid://dj7lcrstj8bf6" path="res://theme/bt_profile.tres" id="3_gd4xv"]
+[ext_resource type="Texture2D" uid="uid://ddbxguouj036r" path="res://texture/gui/profiles.png" id="5_rhfr6"]
+[ext_resource type="FontFile" uid="uid://kju0h8vfvf42" path="res://font/MinecraftTen-VGORe.ttf" id="8_u8u4a"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_xm71v")
+
+[node name="control_menubox" type="Node" parent="."]
+script = ExtResource("1_kr4si")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="control_menubox"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -140.0
+offset_right = 100.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="bt_play" type="Button" parent="control_menubox/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_vt2h8")
+text = "play"
+
+[node name="bt_option" type="Button" parent="control_menubox/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_vt2h8")
+text = "option"
+
+[node name="bt_creator" type="Button" parent="control_menubox/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_vt2h8")
+text = "creator"
+
+[node name="bt_quit" type="Button" parent="control_menubox/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_vt2h8")
+text = "quit"
+
+[node name="bt_langague" type="Button" parent="control_menubox/VBoxContainer/bt_quit"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 111.0
+offset_top = -41.5
+offset_right = 183.0
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("3_gd4xv")
+icon = ExtResource("5_rhfr6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="control_menubox"]
+custom_minimum_size = Vector2(30, 50)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+offset_right = 300.0
+grow_vertical = 0
+size_flags_horizontal = 4
+theme_override_fonts/normal_font = ExtResource("8_u8u4a")
+theme_override_font_sizes/normal_font_size = 31
+text = "LastFom studio©"
+
+[connection signal="pressed" from="control_menubox/VBoxContainer/bt_play" to="control_menubox" method="_on_bt_play_pressed"]
+[connection signal="pressed" from="control_menubox/VBoxContainer/bt_option" to="control_menubox" method="_on_bt_option_pressed"]
+[connection signal="pressed" from="control_menubox/VBoxContainer/bt_creator" to="control_menubox" method="_on_bt_option_pressed"]
+[connection signal="pressed" from="control_menubox/VBoxContainer/bt_creator" to="control_menubox" method="_on_bt_creator_pressed"]
+[connection signal="pressed" from="control_menubox/VBoxContainer/bt_quit" to="control_menubox" method="_on_bt_quit_pressed"]
+[connection signal="pressed" from="control_menubox/VBoxContainer/bt_quit/bt_langague" to="control_menubox" method="_on_bt_play_pressed"]

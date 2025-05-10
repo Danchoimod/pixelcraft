@@ -1,0 +1,20 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1mvy2bb1456q"]
+
+[ext_resource type="PackedScene" uid="uid://meitup8f3wnf" path="res://ui/Hotbar.tscn" id="1_5ybg4"]
+[ext_resource type="Resource" uid="uid://bb7k5ov1cb6r8" path="res://blockResource/diamond_ore.tres" id="3_b34n4"]
+[ext_resource type="Resource" uid="uid://bbic5tgloabpl" path="res://blockResource/tnt.tres" id="3_h8b4r"]
+[ext_resource type="Resource" uid="uid://cvl24no1wb1lh" path="res://blockResource/sand.tres" id="4_27w3r"]
+[ext_resource type="Resource" uid="uid://d2ohrmrjlq5hj" path="res://itemResource/carrot.tres" id="6_sju6g"]
+[ext_resource type="Resource" uid="uid://clc6a8qnw8cw" path="res://itemResource/diamond_sword.tres" id="6_ypo4b"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Hotbar" parent="." instance=ExtResource("1_5ybg4")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_top = -23.0
+offset_bottom = -23.0
+grow_vertical = 0
+items = Array[Resource]([ExtResource("3_h8b4r"), ExtResource("3_b34n4"), ExtResource("4_27w3r"), ExtResource("6_ypo4b"), null, ExtResource("6_sju6g")])

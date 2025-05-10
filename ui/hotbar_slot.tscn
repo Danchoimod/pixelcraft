@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://b313lbqyx08xh"]
+
+[ext_resource type="Texture2D" uid="uid://b5l6voyso2sbb" path="res://texture/gui/gui.png" id="1_y1vd1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8kkl"]
+atlas = ExtResource("1_y1vd1")
+region = Rect2(20, 0, 20, 20)
+
+[node name="Button" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(21.5, 20.5)
+scale = Vector2(2.05, 2.05)
+texture = SubResource("AtlasTexture_y8kkl")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 0
+offset_right = 43.0
+offset_bottom = 42.0
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/Panel"]
+layout_mode = 2
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 27.0
+offset_bottom = 21.0
+text = "64"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://0fdiak7k5qj5"]
+
+[ext_resource type="Texture2D" uid="uid://cauflub5adjb8" path="res://texture/items/diamond_helmet.png" id="1_vymal"]
+[ext_resource type="Script" path="res://itemResource.gd" id="2_qmfwa"]
+
+[resource]
+script = ExtResource("2_qmfwa")
+name = "diamond helmet"
+description = ""
+icon = ExtResource("1_vymal")
+type = "Armor"
+is_original = true
+health = 0
+strengtht = 0
+armor = 10
+inventarSlot = "Equipment"
+inventarPosition = 1
