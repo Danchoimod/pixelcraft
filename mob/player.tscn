@@ -293,8 +293,7 @@ region_rect = Rect2(40, 20, 4, 12)
 
 [node name="HeldItem" type="Sprite2D" parent="RightHand"]
 z_index = 1
-position = Vector2(3.365, 7.97)
-rotation = -0.380482
+position = Vector2(0, 12)
 scale = Vector2(0.3, 0.3)
 
 [node name="Camera2D" type="Camera2D" parent="."]
