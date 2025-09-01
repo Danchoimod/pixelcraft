@@ -1,8 +1,8 @@
 [gd_scene load_steps=17 format=3 uid="uid://dw5x53vgxakcx"]
 
-[ext_resource type="Script" path="res://script/player.gd" id="1_6kh4r"]
+[ext_resource type="Script" uid="uid://d3dvy5o368pox" path="res://script/player.gd" id="1_6kh4r"]
 [ext_resource type="Texture2D" uid="uid://cig7a30v8d316" path="res://skins/steve.png" id="2_d556k"]
-[ext_resource type="Script" path="res://script/start_screen.gd" id="2_glr4s"]
+[ext_resource type="Script" uid="uid://b2kqir8idkpom" path="res://script/start_screen.gd" id="2_glr4s"]
 [ext_resource type="PackedScene" uid="uid://d1mvy2bb1456q" path="res://ui/hub_screen.tscn" id="5_uc3i7"]
 [ext_resource type="PackedScene" uid="uid://hqe4ctslusy3" path="res://ui/survival_inv.tscn" id="5_xs387"]
 
@@ -196,12 +196,12 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_feurl"]
 _data = {
-"RESET": SubResource("Animation_pnoby"),
-"edle": SubResource("Animation_wusxh"),
-"jump": SubResource("Animation_dvl8b"),
-"left_break": SubResource("Animation_xdbch"),
-"right_break": SubResource("Animation_bnfp7"),
-"run": SubResource("Animation_0w61n")
+&"RESET": SubResource("Animation_pnoby"),
+&"edle": SubResource("Animation_wusxh"),
+&"jump": SubResource("Animation_dvl8b"),
+&"left_break": SubResource("Animation_xdbch"),
+&"right_break": SubResource("Animation_bnfp7"),
+&"run": SubResource("Animation_0w61n")
 }
 
 [sub_resource type="GDScript" id="GDScript_sn4vc"]
@@ -220,7 +220,7 @@ script = ExtResource("1_6kh4r")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Camera2D")
 libraries = {
-"": SubResource("AnimationLibrary_feurl")
+&"": SubResource("AnimationLibrary_feurl")
 }
 script = SubResource("GDScript_sn4vc")
 
@@ -291,6 +291,12 @@ offset = Vector2(0, 4.41)
 region_enabled = true
 region_rect = Rect2(40, 20, 4, 12)
 
+[node name="HeldItem" type="Sprite2D" parent="RightHand"]
+z_index = 1
+position = Vector2(3.365, 7.97)
+rotation = -0.380482
+scale = Vector2(0.3, 0.3)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(617, 491)
 rotation_smoothing_enabled = true
@@ -299,4 +305,3 @@ rotation_smoothing_speed = 0.0
 [node name="Hub" parent="." instance=ExtResource("5_uc3i7")]
 
 [node name="Survival" parent="Hub" instance=ExtResource("5_xs387")]
-layout_mode = 1

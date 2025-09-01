@@ -16,6 +16,8 @@ func _on_gui_input(event: InputEvent) -> void:
 		if block:
 			Global.block_id = block_id
 			Global.atlas_coords = block.atlas_coords
+			Global.selected_block = block
+			Global.selected_item = null
 			print("Selected Block:")
 			print("  Block Name: ", block.block_name)
 			print("  Atlas Coords: ", block.atlas_coords)
@@ -23,7 +25,9 @@ func _on_gui_input(event: InputEvent) -> void:
 			print("  Break Time: ", block.break_time)
 			print("  Icon: ", block.icon)
 		elif item:
-			# Có thể thêm biến global cho Item nếu cần
+			# Chọn item và lưu vào Global
+			Global.selected_item = item
+			Global.selected_block = null
 			print("Selected Item:")
 			print("  Item Name: ", item.name)
 			print("  Description: ", item.description)

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Block" load_steps=4 format=3 uid="uid://cvl24no1wb1lh"]
 
 [ext_resource type="Texture2D" uid="uid://c60st28qg551m" path="res://texture/tile_map.png" id="1_teg7l"]
-[ext_resource type="Script" path="res://blockResource.gd" id="2_bwufc"]
+[ext_resource type="Script" uid="uid://lwnpyqfsxsxc" path="res://blockResource.gd" id="2_bwufc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5rpyo"]
 atlas = ExtResource("1_teg7l")

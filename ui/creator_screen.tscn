@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://de4f5pj4xsgwp"]
 
-[ext_resource type="Script" path="res://script/creator_screen.gd" id="1_lof01"]
+[ext_resource type="Script" uid="uid://vldler8mvq4o" path="res://script/creator_screen.gd" id="1_lof01"]
 [ext_resource type="FontFile" uid="uid://kju0h8vfvf42" path="res://font/MinecraftTen-VGORe.ttf" id="1_v1lgv"]
 
 [node name="CreatorScreen" type="Node2D"]

@@ -1,7 +1,5 @@
 extends Control
 
-signal dropOut
-
 @onready var bagContainer = $TextureRect/bagslot
 @onready var keyBarContainer = $TextureRect/keybar
 @onready var equiment = $TextureRect/equipment
@@ -13,6 +11,11 @@ var items = [
 	"res://itemResource/carrot.tres",
 	"res://itemResource/diamond_helmet.tres",
 	"res://itemResource/diamond_sword.tres"
+]
+var blocks = [
+	"res://blockResource/tnt.tres",
+	"res://blockResource/diamond_ore.tres",
+	"res://blockResource/sand.tres"
 ]
 
 func _ready():
@@ -54,7 +57,7 @@ func _get_drag_data(at_position):
 
 	return {"slot": dragSlotNode, "texture": dragSlotNode.texture}
 	
-func _can_drop_data(at_position, data):
+func _can_drop_data(at_position, _data):
 	var targetSlotNode = get_slot_node_at_position(at_position)
 	var onTrashCan = _on_trash_can(at_position)
 	return targetSlotNode != null || onTrashCan
@@ -94,34 +97,67 @@ func _drop_data(at_position, data):
 	targetSlotNode.texture = dragTexture
 	dragSlotNode.texture = targetResource.icon if targetResource else null
 
-func get_slot_node_at_position(position):
+	# Nếu slot đích hoặc nguồn nằm trong KeyBar, đồng bộ Global và phát tín hiệu
+	_sync_keybar_global()
+
+func get_slot_node_at_position(at_pos):
 	var allSlotNodes = (bagContainer.get_children() + keyBarContainer.get_children()
 		+ equiment.get_children() + crafting.get_children())
 
 	for node in allSlotNodes:
 		var nodeRect = node.get_global_rect()
-		
-		if nodeRect.has_point(position):
+		if nodeRect.has_point(at_pos):
 			return node
 	
 	return null
 
-func _on_trash_can(position):
-	return trashCan.get_global_rect().has_point(position)
+func _on_trash_can(at_pos):
+	return trashCan.get_global_rect().has_point(at_pos)
 
 func _refesh_ui():
-	for item in items:
-		item = load(item)
-	
-		var inventarSlot = item["inventarSlot"]
-		var inventarPosition = item["inventarPosition"]
-		var icon = item["icon"]
-		
-		for slot in inventoryDict[inventarSlot].get_children():
-			var slotNumber = int(slot.name.split("Slot")[1])
-			
-			if slotNumber == inventarPosition:
-				slot.set_new_data(item)
+	# Nạp và đặt sẵn một số item + block demo
+	var to_place: Array = []
+	for p in items:
+		var it: Resource = load(p)
+		if it:
+			to_place.append(it)
+	for p in blocks:
+		var bl: Resource = load(p)
+		if bl:
+			to_place.append(bl)
+
+	# Đặt vào BagSlots theo thứ tự trống
+	for r in to_place:
+		for slot in inventoryDict["BagSlots"].get_children():
+			if slot.texture == null and slot.has_method("set_new_data"):
+				slot.set_new_data(r)
+				break
+
+	# Sau khi làm mới UI, đồng bộ KeyBar vào Global (nếu đã có sẵn gì đó)
+	_sync_keybar_global()
+
+func _sync_keybar_global():
+	# Đọc 9 ô keybar và ghi vào Global.keybar_items, sau đó phát tín hiệu
+	if Global.keybar_items.size() < 9:
+		Global.keybar_items.resize(9)
+	var changed := false
+	var i := 0
+	for slot in keyBarContainer.get_children():
+		var item = null
+		# Nhận diện slot_node qua phương thức có sẵn
+		if slot.has_method("get_slot_name"):
+			item = slot.itemResource
+		# Cập nhật
+		if i < Global.keybar_items.size():
+			if Global.keybar_items[i] != item:
+				Global.keybar_items[i] = item
+				changed = true
+		i += 1
+		if i >= 9:
+			break
+	if changed:
+		if Global.has_signal("keybar_changed"):
+			Global.emit_signal("keybar_changed")
 
 
 func _on_texture_rect_mouse_entered() -> void:

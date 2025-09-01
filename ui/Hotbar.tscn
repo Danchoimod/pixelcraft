@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://meitup8f3wnf"]
 
-[ext_resource type="Script" path="res://script/hotbar.gd" id="1_0udxj"]
+[ext_resource type="Script" uid="uid://cofxshav1ewne" path="res://script/hotbar.gd" id="1_0udxj"]
 [ext_resource type="Texture2D" uid="uid://b5l6voyso2sbb" path="res://texture/gui/gui.png" id="1_l4e6q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jhn4q"]

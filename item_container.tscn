@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ccdr8hono0ift"]
 
 [ext_resource type="Texture2D" uid="uid://byckyqfi8vf8r" path="res://texture/items/apple_golden.png" id="1_n4107"]
-[ext_resource type="Script" path="res://script/item_container.gd" id="2_8ap1e"]
+[ext_resource type="Script" uid="uid://cb5be08trppty" path="res://script/item_container.gd" id="2_8ap1e"]
 
 [node name="ItemContainer" type="TextureRect"]
 custom_minimum_size = Vector2(35, 35)

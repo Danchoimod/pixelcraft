@@ -12,6 +12,7 @@ var sneaking = false
 var hub_screen = preload("res://ui/hub_screen.tscn").instantiate()
 @onready var hotbar: ItemList = hub_screen.find_child("hotbar", true, false)
 @onready var inventory = $Hub/Survival
+@onready var held_item_sprite: Sprite2D = $RightHand/HeldItem
 
 
 
@@ -90,8 +91,27 @@ func _physics_process(delta):
 		$LeftArm.flip_h = false
 		$RightHand.flip_h = false
 	move_and_slide()
+
+	# Update held item/block icon every frame (cheap, only changes texture when selection changes)
+	_update_held_item_icon()
 func sneak():
 	$head.rotation = 180
 func _on_hotbar_gui_input(event):
 	if event is InputEventMouseButton and event.pressed:
 		get_viewport().set_input_as_handled()  # Chặn sự kiện chuột tiếp tục lan xuống dưới
+
+func _update_held_item_icon():
+	var tex: Texture2D = null
+	if Global.selected_item:
+		tex = Global.selected_item.icon
+	elif Global.selected_block:
+		tex = Global.selected_block.icon
+	elif Global.block_id != 0 and Global.atlas_coords != Vector2i(-1, -1) and Global.all_blocks.size() > 0:
+		# Fallback: tìm block theo block_id trong all_blocks
+		for b in Global.all_blocks:
+			if b.block_id == Global.block_id:
+				tex = b.icon
+				break
+	# Chỉ set khi khác để tránh redraw không cần thiết
+	if held_item_sprite.texture != tex:
+		held_item_sprite.texture = tex
